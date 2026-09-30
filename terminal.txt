@@ -1,0 +1,3 @@
+$env:NODE_OPTIONS="--use-system-ca"
+
+//run this cmd in terminal if npm install get error like ssl certificate not verified
