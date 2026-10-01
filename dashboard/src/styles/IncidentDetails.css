@@ -1,0 +1,361 @@
+.incident-details-page {
+    padding: 30px;
+    color: #f5f7fa;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .back-btn {
+    background: #202631;
+    border: 1px solid #303746;
+    color: #aab6cb;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+  
+  .back-btn:hover {
+    background: #29303c;
+    color: #ffffff;
+  }
+  
+  /* HEADER */
+  
+  .incident-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #181b22;
+    border: 1px solid #2a303a;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .page-label {
+    color: #71809a;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 0 0 8px;
+  }
+  
+  .incident-details-header h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  .incident-id {
+    color: #71809a;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  
+  .incident-badges {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .severity-badge,
+  .status-badge {
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  /* SEVERITY */
+  
+  .severity-badge.sev1 {
+    background: #5c1f26;
+    color: #ff626d;
+  }
+  
+  .severity-badge.sev2 {
+    background: #57431d;
+    color: #ffc44d;
+  }
+  
+  .severity-badge.sev3 {
+    background: #173e2c;
+    color: #48df8b;
+  }
+  
+  .severity-badge.sev4 {
+    background: #242b36;
+    color: #9daac0;
+  }
+  
+  /* STATUS */
+  
+  .status-badge.open {
+    background: #5c1f26;
+    color: #ff626d;
+  }
+  
+  .status-badge.investigating {
+    background: #57431d;
+    color: #ffc44d;
+  }
+  
+  .status-badge.identified {
+    background: #263b5c;
+    color: #73a7ff;
+  }
+  
+  .status-badge.monitoring {
+    background: #49365c;
+    color: #c18cff;
+  }
+  
+  .status-badge.resolved {
+    background: #173e2c;
+    color: #48df8b;
+  }
+  
+  /* CARDS */
+  
+  .details-card {
+    background: #181b22;
+    border: 1px solid #2a303a;
+    border-radius: 16px;
+    padding: 25px 28px;
+    margin-bottom: 20px;
+  }
+  
+  .details-card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .details-card p {
+    color: #8997b0;
+    line-height: 1.6;
+  }
+  
+  /* WORKFLOW */
+  
+  .workflow-card {
+    overflow-x: auto;
+  }
+  
+  .workflow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    min-width: 650px;
+  }
+  
+  .workflow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #71809a;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .workflow-step.active {
+    color: #ffffff;
+  }
+  
+  .workflow-step.completed {
+    color: #48df8b;
+  }
+  
+  .workflow-dot {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #394250;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .workflow-step.active .workflow-dot {
+    border-color: #4c8dff;
+    background: #263b5c;
+    color: #73a7ff;
+  }
+  
+  .workflow-step.completed .workflow-dot {
+    border-color: #48df8b;
+    background: #173e2c;
+    color: #48df8b;
+  }
+  
+  .workflow-line {
+    width: 70px;
+    height: 2px;
+    background: #303746;
+    margin: 0 8px;
+    margin-bottom: 22px;
+  }
+  
+  .workflow-line.completed {
+    background: #48df8b;
+  }
+  
+  /* STATUS ACTION */
+  
+  .status-action {
+    border-top: 1px solid #2a303a;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .status-action p {
+    margin: 0;
+  }
+  
+  .status-action strong {
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  
+  .next-status-btn {
+    background: #4c8dff;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+  }
+  
+  .next-status-btn:hover {
+    background: #3c7ce8;
+    transform: translateY(-1px);
+  }
+  
+  .next-status-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  /* ERROR */
+  
+  .status-error {
+    background: #5c1f26;
+    border: 1px solid #8a3038;
+    color: #ff8c94;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  /* RESOLVED */
+  
+  .resolved-message {
+    border-top: 1px solid #2a303a;
+    padding-top: 20px;
+    color: #48df8b;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .resolved-message span {
+    display: block;
+    color: #8997b0;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 8px;
+  }
+  
+  /* INFO */
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+  
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  
+  .info-item span {
+    color: #71809a;
+    font-size: 12px;
+  }
+  
+  .info-item strong {
+    color: #dce2ec;
+    font-size: 14px;
+  }
+  
+  /* LOADING / ERROR */
+  
+  .loading-card,
+  .error-card {
+    text-align: center;
+    padding: 50px;
+    color: #8997b0;
+  }
+  
+  .error-card {
+    color: #ff626d;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 900px) {
+  
+    .incident-details-header {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .info-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .status-action {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .next-status-btn {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+  
+    .incident-details-page {
+      padding: 15px;
+    }
+  
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .incident-details-header h1 {
+      font-size: 22px;
+    }
+  
+    .incident-badges {
+      flex-wrap: wrap;
+    }
+  
+    .workflow {
+      justify-content: flex-start;
+    }
+  }

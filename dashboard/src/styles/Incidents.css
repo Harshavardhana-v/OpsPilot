@@ -1,0 +1,60 @@
+/* Status Action Button */
+
+.status-action-btn {
+    border: none;
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    white-space: nowrap;
+  }
+  
+  .status-action-btn:hover {
+    transform: translateY(-1px);
+  }
+  
+  .status-action-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  /* Open → Investigating */
+  
+  .status-action-btn.investigating {
+    background: #294a70;
+    color: #7db8ff;
+  }
+  
+  /* Investigating → Identified */
+  
+  .status-action-btn.identified {
+    background: #57431d;
+    color: #ffc44d;
+  }
+  
+  /* Identified → Monitoring */
+  
+  .status-action-btn.monitoring {
+    background: #263d52;
+    color: #6fc5ff;
+  }
+  
+  /* Monitoring → Resolved */
+  
+  .status-action-btn.resolved {
+    background: #173e2c;
+    color: #48df8b;
+  }
+  
+  .resolved-label {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #173e2c;
+    color: #48df8b;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }

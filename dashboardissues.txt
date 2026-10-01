@@ -1,0 +1,23 @@
+If the dashboard shows 0 incidents again
+Use this short checklist:
+1. Check token
+   ↓
+localStorage.getItem("token")
+
+2. If null / expired
+   ↓
+Login through PowerShell:
+POST /api/auth/login
+
+3. Copy fresh JWT
+   ↓
+Browser Console:
+localStorage.setItem("token", "FRESH_TOKEN")
+
+4. Verify
+   ↓
+localStorage.getItem("token")
+
+5. Refresh dashboard
+   ↓
+Ctrl + R

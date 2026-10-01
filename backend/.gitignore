@@ -39,3 +39,7 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+backendissues.txt
+dashboardissues.txt
+terminal.txt
